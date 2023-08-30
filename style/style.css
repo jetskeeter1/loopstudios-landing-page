@@ -231,12 +231,6 @@ footer {
   border-bottom: 2px solid transparent;
   padding-bottom: 5px;
 }
-.footer-list ol::after {
-  margin-left: -10px;
-}
-.footer-list ol::before {
-  margin-right: 10px;
-}
 .footer-list ol:hover {
   position: relative;
   border-bottom: 2px solid white;
