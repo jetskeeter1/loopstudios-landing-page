@@ -1,0 +1,65 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+@font-face {
+    font-family: alata;
+    src: url(../fonts/Alata/Alata-Regular.ttf);
+}
+
+@font-face {
+    font-family: josef;
+    src: url(../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+    font-weight: 300;
+}
+
+$white: #FFF;
+$fontN: 18px;
+
+.flex{
+    display: flex;
+}
+
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.367)), url("../images/desktop/image-hero.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50px 10em;
+    height: 77.7vh;
+    
+    nav{
+        justify-content: space-between;
+    }
+
+    img{
+        height: 29px;
+    }
+
+    ul{
+        gap: 20px;
+        font-size: $fontN - 2.5;
+    }
+
+    ul a{
+        font-family: alata;
+        text-decoration: none;
+        color: $white;
+
+        &:hover{
+            background-color: red;
+        }
+    }
+
+    .billboard-hero{
+        display: block;
+        width: fit-content;
+        border: 1px solid white;
+        padding: 30px;
+        margin-top: 129px;
+        cursor: default;
+
+        .font-is-v-large{
+            font-family: josef;
+            font-size: $fontN * 3.7;
+            color: white;
+        }
+    }
+}

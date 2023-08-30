@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: alata;
+  src: url(../fonts/Alata/Alata-Regular.ttf);
+}
+@font-face {
+  font-family: josef;
+  src: url(../fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+  font-weight: 300;
+}
+.flex {
+  display: flex;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.367)), url("../images/desktop/image-hero.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 50px 10em;
+  height: 77.7vh;
+}
+header nav {
+  justify-content: space-between;
+}
+header img {
+  height: 29px;
+}
+header ul {
+  gap: 20px;
+  font-size: 15.5px;
+}
+header ul a {
+  font-family: alata;
+  text-decoration: none;
+  color: #FFF;
+}
+header ul a:hover {
+  background-color: red;
+}
+header .billboard-hero {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid white;
+  padding: 30px;
+  margin-top: 129px;
+  cursor: default;
+}
+header .billboard-hero .font-is-v-large {
+  font-family: josef;
+  font-size: 66.6px;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
