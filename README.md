@@ -29,8 +29,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Hero-banner-finish](/process%20image/hero-nav.png)
+![Hero-banner-finish](images/process%20image/hero-nav.png)
 the use of sass really made it more compact and easier to know where and what is going on inside my code. The way on how I made my the banner is the use of the br element or break line tag and resize the billboard-hero and font-is-v-large which got the result I wanted.
+
+![Lead-article](images/process%20image/main-lead-article.png)
+This is done quite easily know that I have to add on main a margin of 104px and that the lead container would squish the inside content and suprisingly got almost exactly the same the first time.
 
 ### Links
 

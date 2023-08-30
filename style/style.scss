@@ -1,5 +1,12 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
 @font-face {
     font-family: alata;
     src: url(../fonts/Alata/Alata-Regular.ttf);
@@ -16,6 +23,10 @@ $fontN: 18px;
 
 .flex{
     display: flex;
+}
+
+.grid{
+    display: grid;
 }
 
 header{
@@ -41,7 +52,7 @@ header{
     ul a{
         font-family: alata;
         text-decoration: none;
-        color: $white;
+        color: var(--White);
 
         &:hover{
             background-color: red;
@@ -59,7 +70,50 @@ header{
         .font-is-v-large{
             font-family: josef;
             font-size: $fontN * 3.7;
-            color: white;
+            color: var(--White);
         }
     }
+}
+
+main *{
+    border: 1px solid black;
+
+}
+main{
+    margin: 103PX;
+}
+
+.lead-container{
+    position: relative;
+    margin-bottom: 170px;
+    img{
+        width: 48em;
+    }
+}
+
+.quick-info{
+    position: absolute;
+    background-color: var(--White);
+    width: 505px;
+    padding: 50px;
+    right: 0;
+    top: 220px;
+    
+    .lead-title{
+        font-family: josef;
+        font-size: $fontN *2.6;
+        margin-bottom: 10px;
+    }
+
+    .lead-description{
+        font-family: alata;
+        font-size: $fontN - 4;
+        line-height: 20px;
+        color: var(--Dark-Gray);
+    }
+}
+
+footer{
+    background-color: #000;
+    color: #FFF;
 }

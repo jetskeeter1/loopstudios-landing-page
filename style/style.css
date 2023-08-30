@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
 @font-face {
   font-family: alata;
   src: url(../fonts/Alata/Alata-Regular.ttf);
@@ -15,6 +22,10 @@
 }
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 header {
@@ -37,7 +48,7 @@ header ul {
 header ul a {
   font-family: alata;
   text-decoration: none;
-  color: #FFF;
+  color: var(--White);
 }
 header ul a:hover {
   background-color: red;
@@ -54,5 +65,46 @@ header .billboard-hero {
 header .billboard-hero .font-is-v-large {
   font-family: josef;
   font-size: 66.6px;
-  color: white;
+  color: var(--White);
+}
+
+main * {
+  border: 1px solid black;
+}
+
+main {
+  margin: 103PX;
+}
+
+.lead-container {
+  position: relative;
+  margin-bottom: 170px;
+}
+.lead-container img {
+  width: 48em;
+}
+
+.quick-info {
+  position: absolute;
+  background-color: var(--White);
+  width: 505px;
+  padding: 50px;
+  right: 0;
+  top: 220px;
+}
+.quick-info .lead-title {
+  font-family: josef;
+  font-size: 46.8px;
+  margin-bottom: 10px;
+}
+.quick-info .lead-description {
+  font-family: alata;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--Dark-Gray);
+}
+
+footer {
+  background-color: #000;
+  color: #FFF;
 }/*# sourceMappingURL=style.css.map */
