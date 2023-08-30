@@ -1,4 +1,9 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
+*{margin: 0; padding: 0; box-sizing: border-box; cursor: default;}
+
+a, button{
+    cursor: pointer;
+    text-decoration: none;
+}
 
 :root{
     --White: hsl(0, 0%, 100%);
@@ -29,12 +34,14 @@ $fontN: 18px;
     display: grid;
 }
 
+// __________________________________________________HEADER_______________
+
 header{
     background-image:linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.367)), url("../images/desktop/image-hero.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     padding: 50px 10em;
-    height: 77.7vh;
+    height: 76.8vh;
     
     nav{
         justify-content: space-between;
@@ -51,7 +58,6 @@ header{
 
     ul a{
         font-family: alata;
-        text-decoration: none;
         color: var(--White);
 
         &:hover{
@@ -65,7 +71,6 @@ header{
         border: 1px solid white;
         padding: 30px;
         margin-top: 129px;
-        cursor: default;
 
         .font-is-v-large{
             font-family: josef;
@@ -75,19 +80,19 @@ header{
     }
 }
 
-main *{
-    border: 1px solid black;
+// ___________________________________________________MAIN_CONTENT___________
 
-}
 main{
-    margin: 103PX;
+    margin: 123PX;
 }
 
 .lead-container{
+
     position: relative;
-    margin-bottom: 170px;
+    margin-bottom: 100px;
+
     img{
-        width: 48em;
+        width: 44em;
     }
 }
 
@@ -113,7 +118,180 @@ main{
     }
 }
 
+.mid-section{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .creation-title{
+        font-family: josef;
+        font-size: $fontN * 2;
+    }
+
+    .creation-button{
+        background-color: transparent;
+        border: 1px solid black;
+        height: 32px;
+        width: 120px;
+
+        &:hover{
+            background-color: black;
+            a{
+                color: white;
+            }
+        }
+        
+        a {  
+            color: var(--Black); 
+            letter-spacing: 2px; 
+            font-size: $fontN - 5;
+        }
+    }
+}
+
+// ___________________________________________CREATION_GRID_SECTION_________
+
+.grid{
+    grid-template-columns: repeat(4, 227px);
+    grid-template-rows: repeat(2, 400px);
+    gap: 20px;
+    justify-content: center;
+
+    .item{
+        display: flex;
+        color: white;
+        text-decoration: none;
+        font-size: $fontN * 1.5;
+        padding: 30px;
+        font-family: josef;
+        align-items: flex-end;
+    }
+
+    a{
+        background-size: contain;
+    }
+
+    .earth{
+        background-image:linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)), url(../images/desktop/image-deep-earth.jpg);
+        &:hover{
+            background-image:linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-deep-earth.jpg);
+            color: var(--Black);
+        }
+    }
+
+    .arcade{
+        background-image:linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)), url(../images/desktop/image-night-arcade.jpg);
+        &:hover{
+            background-image:linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-night-arcade.jpg);
+            color: var(--Black);
+        }
+    }
+
+    .soccer{
+        background-image:linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0)), url(../images/desktop/image-soccer-team.jpg);
+        &:hover{
+            background-image:linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-soccer-team.jpg);
+            color: var(--Black);
+        }
+    }
+
+    .grid{
+        background-image:linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)), url(../images/desktop/image-grid.jpg);
+        &:hover{
+            background-image:linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-grid.jpg);
+            color: var(--Black);
+        }
+    }
+
+    .up{
+        background-image:linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)), url(../images/desktop/image-from-above.jpg);
+        &:hover{
+            background-image:linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-from-above.jpg);
+            color: var(--Black);
+        }
+    }
+
+    .pocket{
+        background-image:linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)), url(../images/desktop/image-pocket-borealis.jpg);
+        &:hover{
+            background-image:linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-pocket-borealis.jpg);
+            color: var(--Black);
+        }
+    }
+
+    .curiosity{
+        background-image:linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)), url(../images/desktop/image-curiosity.jpg);
+        &:hover{
+            background-image:linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-curiosity.jpg);
+            color: var(--Black);
+        }
+    }
+
+    .fisheye{
+        background-image:linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0)), url(../images/desktop/image-fisheye.jpg);
+        &:hover{
+            background-image:linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-fisheye.jpg);
+            color: var(--Black);
+        }
+    }
+}
+
+// __________________________________________FOOTER_SECTION_______________________
+
 footer{
     background-color: #000;
     color: #FFF;
+    padding: 20px 50px;
+
 }
+
+.media-logo, .link-rights{
+    justify-content: space-between;
+}
+
+.media-logo img{
+    height: 20px;
+}
+
+.media{
+    gap: 10px;
+
+}
+
+.footer-list{
+    gap:10px;
+
+    ol{
+        border-bottom: 2px solid transparent;
+        padding-bottom: 5px;
+    }
+
+    ol::after{ margin-left: -10px;}
+    ol::before{ margin-right: 10px;}
+
+    ol:hover{
+        position: relative;
+        border-bottom: 2px solid white;
+        cursor: pointer;
+    }
+}
+
+.link-rights{
+    font-family: josef;
+    font-size: $fontN - 5;
+    margin-top: 10px;
+
+    ul{
+        font-family: alata;
+    }
+
+    a{
+        color: white;
+    }
+}
+
+.rights{
+    color: var(--Dark-Gray);
+
+}
+
