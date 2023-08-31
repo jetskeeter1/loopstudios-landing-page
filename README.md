@@ -35,10 +35,16 @@ the use of sass really made it more compact and easier to know where and what is
 ![Lead-article](images/process%20image/main-lead-article.png)
 This is done quite easily know that I have to add on main a margin of 104px and that the lead container would squish the inside content and suprisingly got almost exactly the same the first time.
 
+![footer-finish-all-active-state](image/process%20image/website-interactivity.png)
+the see all button and grid item active state was not too hard and with the help of sass did made it easier to make it. The trouble I had with is the links with border bottom, the solution that I find is the use of pseudo code and manipulate its position's absolute that is relative to its parent container. You can find this under .media-list, .nav-list, and .footer-list. The names are weird, but I just stuck to it.
+
+![mobile-version](image/process%20image/mobile-finish.png)
+This is a finish where I did a lot of changes like its background images, positioning of each of the elements in the main and footer. I did some changes to the footer so that I would be able to make the footer close to the preview image as much as possible. Lastly, I create the drop-down sidebar along with transition for easy smooth animation from drop down from the top to show the list of links.
+
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [github page url](https://jetskeeter1.github.io/loopstudios-landing-page/)
+- GitHub URL Repository: [repository](https://github.com/jetskeeter1/loopstudios-landing-page)
 
 ## My process
 
@@ -53,6 +59,8 @@ This is done quite easily know that I have to add on main a margin of 104px and 
 ### What I learned
 
 I love the using Sass, I learn to be a bit more organized with the way how I do things using nesting. It definitly got eaiser to do css and I did things a lot quicker than before where I have to look very intensively just to find where the css is located in the file.
+
+I also learn that I need to take advantage of the pseudo code more often when it comes to have effects on an elements itself. I would love to learn more about different methods regarding pseudo code effects.
 
 ### Continued development
 

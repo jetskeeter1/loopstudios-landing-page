@@ -41,6 +41,12 @@ header {
   padding: 50px 10em;
   height: 76.8vh;
 }
+header .menu {
+  display: none;
+}
+header .close-menu {
+  display: none;
+}
 header nav {
   justify-content: space-between;
 }
@@ -55,9 +61,6 @@ header ul a {
   font-family: alata;
   color: var(--White);
 }
-header ul a:hover {
-  background-color: red;
-}
 header .billboard-hero {
   display: block;
   width: -moz-fit-content;
@@ -70,6 +73,18 @@ header .billboard-hero .font-is-v-large {
   font-family: josef;
   font-size: 66.6px;
   color: var(--White);
+}
+
+.nav-list ol {
+  position: relative;
+}
+.nav-list a:hover::after {
+  content: " ";
+  position: absolute;
+  width: 35px;
+  bottom: 0;
+  left: 15%;
+  border-bottom: 2px solid white;
 }
 
 main {
@@ -113,19 +128,20 @@ main {
   font-family: josef;
   font-size: 36px;
 }
-.mid-section .creation-button {
+
+.creation-button {
   background-color: transparent;
   border: 1px solid black;
   height: 32px;
   width: 120px;
 }
-.mid-section .creation-button:hover {
+.creation-button:hover {
   background-color: black;
 }
-.mid-section .creation-button:hover a {
+.creation-button:hover a {
   color: white;
 }
-.mid-section .creation-button a {
+.creation-button a {
   color: var(--Black);
   letter-spacing: 2px;
   font-size: 13px;
@@ -170,10 +186,10 @@ main {
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-soccer-team.jpg);
   color: var(--Black);
 }
-.grid .grid {
+.grid .grids {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/desktop/image-grid.jpg);
 }
-.grid .grid:hover {
+.grid .grids:hover {
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/desktop/image-grid.jpg);
   color: var(--Black);
 }
@@ -206,35 +222,66 @@ main {
   color: var(--Black);
 }
 
+.creation-button {
+  display: none;
+}
+
 footer {
+  position: relative;
+  justify-content: space-between;
   background-color: #000;
   color: #FFF;
   padding: 20px 50px;
 }
 
 .media-logo, .link-rights {
-  justify-content: space-between;
+  display: block;
 }
 
 .media-logo img {
+  margin: 0;
+  padding: 0;
   height: 20px;
 }
 
-.media {
+.media-list {
   gap: 10px;
+}
+
+.media-list {
+  margin-bottom: 5px;
+}
+.media-list ol {
+  position: relative;
+  padding-bottom: 5px;
+}
+.media-list ol a:hover::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  bottom: 0;
+  border-bottom: 2px solid white;
+  right: 10%;
 }
 
 .footer-list {
   gap: 10px;
 }
 .footer-list ol {
-  border-bottom: 2px solid transparent;
-  padding-bottom: 5px;
-}
-.footer-list ol:hover {
+  padding: 7px;
   position: relative;
+}
+.footer-list ol a {
+  font-family: josef;
+  color: white;
+}
+.footer-list ol a:hover::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  bottom: 0;
   border-bottom: 2px solid white;
-  cursor: pointer;
+  right: 28%;
 }
 
 .link-rights {
@@ -251,4 +298,207 @@ footer {
 
 .rights {
   color: var(--Dark-Gray);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 375px) {
+  .mobile-grid-one-column {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  header {
+    padding: 30px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/mobile/image-hero.jpg");
+    height: 40.7em;
+  }
+  header .menu, header .close-menu {
+    position: absolute;
+    display: block;
+    height: 15px;
+    cursor: pointer;
+  }
+  header .nav-logo {
+    z-index: 1;
+    height: 20px;
+  }
+  header .nav-list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0 20px 0 20px;
+    background-color: black;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+  }
+  header .nav-list ol a {
+    font-size: 20px;
+    font-family: josef;
+    font-weight: 100;
+  }
+  header .nav-list a:hover::after {
+    content: "";
+    left: 0;
+    bottom: -10px;
+    border-bottom: 1px solid magenta;
+    width: 100%;
+  }
+  header .nav-open {
+    height: 100vh;
+  }
+  header .menu, header .close-menu {
+    top: 32px;
+    right: 30px;
+  }
+  header .billboard-hero {
+    width: 340px;
+    padding: 20px 20px;
+    margin: 200px auto;
+  }
+  header .billboard-hero .font-is-v-large {
+    font-size: 2.7em;
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 30px 10px;
+  }
+  .lead-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .lead-container img {
+    width: 20em;
+  }
+  .lead-container .quick-info {
+    width: 85%;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 0;
+    text-align: center;
+    word-spacing: 5px;
+  }
+  .lead-container .quick-info h1 {
+    font-size: 33px;
+    font-weight: 100;
+  }
+  .lead-container .quick-info .lead-description {
+    font-size: 15px;
+  }
+  .grid {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, 121px);
+    padding: 0;
+  }
+  .grid .earth {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/mobile/image-deep-earth.jpg);
+    background-size: contain;
+  }
+  .grid .earth:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/mobile/image-deep-earth.jpg);
+    color: var(--Black);
+  }
+  .grid .arcade {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/mobile/image-night-arcade.jpg);
+    background-size: contain;
+  }
+  .grid .arcade:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/mobile/image-night-arcade.jpg);
+    color: var(--Black);
+  }
+  .grid .soccer {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/mobile/image-soccer-team.jpg);
+    background-size: contain;
+  }
+  .grid .soccer:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/mobile/image-soccer-team.jpg);
+    color: var(--Black);
+  }
+  .grid .grids {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/mobile/image-grid.jpg);
+    background-size: contain;
+  }
+  .grid .grids:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/mobile/image-grid.jpg);
+    color: var(--Black);
+  }
+  .grid .up {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/mobile/image-from-above.jpg);
+    background-size: contain;
+  }
+  .grid .up:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/mobile/image-from-above.jpg);
+    color: var(--Black);
+  }
+  .grid .pocket {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/mobile/image-pocket-borealis.jpg);
+    background-size: contain;
+  }
+  .grid .pocket:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/mobile/image-pocket-borealis.jpg);
+    color: var(--Black);
+  }
+  .grid .curiosity {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/mobile/image-curiosity.jpg);
+    background-size: contain;
+  }
+  .grid .curiosity:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/mobile/image-curiosity.jpg);
+    color: var(--Black);
+  }
+  .grid .fisheye {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../images/mobile/image-fisheye.jpg);
+    background-size: contain;
+  }
+  .grid .fisheye:hover {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/mobile/image-fisheye.jpg);
+    color: var(--Black);
+  }
+  .creation-container {
+    text-align: center;
+  }
+  .desktop-button {
+    display: none;
+  }
+  .mid-section {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 50px auto;
+  }
+  .mobile-button {
+    display: block;
+    margin: 10px auto;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .footer-list ol {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .media-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

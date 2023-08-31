@@ -22,14 +22,22 @@
   <header>
     
     <nav class="flex">
-      <img src="images/logo.svg" alt="Loopstudios">
-      <ul class=" nav-list flex">
-        <ol><a href="#About">About</a></ol>
-        <ol><a href="#Careers">Careers</a></ol>
-        <ol><a href="#Events">Events</a></ol>
-        <ol><a href="#Product">Product</a></ol>
-        <ol><a href="#Support">Support</a></ol>
+
+      <img src="images/icon-hamburger.svg" alt="humborger" class="menu" id="buttonOpen">
+
+      <img src="images/logo.svg" alt="Loopstudios" class="nav-logo">
+
+      <ul class=" nav-list flex" id="navDrop">
+
+        <img src="images/icon-close.svg" alt="x" class="close-menu" id="buttonClose">
+
+        <ol><a href="#About" class="about">About</a></ol>
+        <ol><a href="#Careers" class="career">Careers</a></ol>
+        <ol><a href="#Events" class="event">Events</a></ol>
+        <ol><a href="#Product" class="product">Product</a></ol>
+        <ol><a href="#Support" class="support">Support</a></ol>
       </ul>
+
     </nav>
 
     <div class="billboard-hero">
@@ -46,7 +54,10 @@
 
     <div class="lead-container">
       
-      <img src="images/desktop/image-interactive.jpg" alt="interactive man">
+      <picture>
+        <source media="(max-width: 375px)" srcset="/images/mobile/image-interactive.jpg">  
+        <img src="images/desktop/image-interactive.jpg" alt="interactive man">
+      </picture>
 <!-- make this go infront of image -->
       <article class="quick-info">
         <h1 class="lead-title">THE LEADER IN INTERACTIVE VR</h1>
@@ -65,59 +76,61 @@
 
         <h1 class="creation-title">OUR CREATIONS</h1>
 
-        <button class="creation-button"><a href="#See-all">SEE ALL</a></button>
+        <button class="creation-button desktop-button"><a href="#See-all">SEE ALL</a></button>
 
       </section>
 
+      <!-- creation grid section -->
       <article class="grid flex">
         
         <a href="#earth" class="item earth">DEEP EARTH</a>
         <a href="#arcade" class="item arcade">NIGHT ARCADE</a>
         <a href="#soccer" class="item soccer">SOCCER TEAM VR</a>
-        <a href="#grid" class="item grid">THE GRID</a>
+        <a href="#grid" class="item grids">THE GRID</a>
         <a href="#above" class="item up">FROM UP ABOVE VR</a>
         <a href="#pocket" class="item pocket">POCKET BOREALIS</a>
         <a href="#curiosity" class="item curiosity">THE CURIOSITY</a>
         <a href="#fisheye" class="item fisheye">MAKE IT FISHEYE</a>
 
       </article>
+
+      <button class="creation-button mobile-button"><a href="#See-all">SEE ALL</a></button>
   
     </section>
 
   </main>
 
-  <footer>
+  <footer class="flex">
 
-    <section class="media-logo flex">
-      <img src="images/logo.svg" alt="logo">
-      <div class="media flex">
-        <ul class="footer-list flex">
-          <ol><img src="images/icon-facebook.svg" alt="facbook"></ol>
-          <ol><img src="images/icon-twitter.svg" alt="twitter"></ol>
-          <ol><img src="images/icon-pinterest.svg" alt="pinterest"></ol>
-          <ol><img src="images/icon-instagram.svg" alt="instagram"></ol>
-        </ul>
-      </div>
-    </section>
-
-    <section class="link-rights flex">
-      <ul class="footer-list flex">
+    <section class="media-logo mobile-grid-one-column ">
+      <img src="images/logo.svg" alt="logo" class="logo-footer">
+      
+      <ul class="footer-list mobile-grid-one-column flex">
         <ol><a href="#About">About</a></ol>
         <ol><a href="#Careers">Careers</a></ol>
         <ol><a href="#Events">Events</a></ol>
         <ol><a href="#Product">Product</a></ol>
         <ol><a href="#Support">Support</a></ol>
       </ul>
+    </section>
+    
+    <section class="link-rights mobile-grid-one-column ">
+        <ul class="media-list flex">
+          <ol><a href="#facebook"><img src="images/icon-facebook.svg" alt="facbook"></a></ol>
+          <ol><a href="#twitter"><img src="images/icon-twitter.svg" alt="twitter"></a></ol>
+          <ol><a href="#pinterest"><img src="images/icon-pinterest.svg" alt="pinterest"></a></ol>
+          <ol><a href="#instagram"><img src="images/icon-instagram.svg" alt="instagram"></a></ol>
+        </ul>
 
       <p class="rights">© 2021 Loopstudios. All rights reserved.</p>
     </section>
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/jetskeeter1">Dalton Napala</a>.
     </div>
 
   </footer>
-
+  <script src="javascript.js"></script>
 </body>
 </html>
